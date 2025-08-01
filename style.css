@@ -69,9 +69,10 @@ body {
 
 }
 #navlinks {
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* interactive elements */ 
@@ -88,7 +89,7 @@ a {
 
 /* SECOND HALF OF PAGE */
 
-.pagedivisor2 {
+#pagedivisor2 {
     
     border: white 1px solid;
     border-radius: 25px;
@@ -118,7 +119,7 @@ a {
     margin-bottom: 10px;
 }
 
-.pagedivisor3 {
+#pagedivisor3 {
     
     border: white 1px solid;
     border-radius: 25px;
@@ -132,7 +133,7 @@ a {
 }
 
 
-.heading {
+#heading {
     
     border-radius: 25px;
     font-size: 15px;

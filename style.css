@@ -174,3 +174,11 @@ a {
 #unofficialfootnote {
     margin-bottom: 10px;
 }
+
+#lightModeToggle:hover {
+    cursor: pointer;
+}
+
+#lightModeToggle {
+    user-select: none;
+}

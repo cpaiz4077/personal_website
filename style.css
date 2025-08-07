@@ -3,6 +3,20 @@
     margin: 0 0;
 }
 
+:root {
+    --bg-color: black;
+    --text-color: white;
+    --border-color: white;
+
+    scroll-behavior: smooth;
+}
+
+[data-theme="light"] {
+    --bg-color: white;
+    --text-color: black;
+    --border-color: black;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,8 +26,10 @@ body {
     padding: 0 2em;
 
     font-family: monospace;
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    transition: all 0.2s ease-in-out;
 }
 
 #navbar {
@@ -26,9 +42,9 @@ body {
     padding: 10px 20px;
 
     border-radius: 25px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
     font-size: 15px;
 }
 
@@ -73,8 +89,7 @@ section {
 #portrait {
     width: 40%;
     height: 100%;
-    color: 20px;
-    border: white 1px solid;
+    border: var(--border-color) 1px solid;
     border-radius: 10px;
     padding: 10px;
 }
@@ -94,7 +109,7 @@ section {
 
 a {
     text-decoration: none;
-    color:white;
+    color:var(--text-color);
 }
 
 /* SECOND HALF OF PAGE */
@@ -105,14 +120,12 @@ a {
     padding: 40px;
     max-width: 1000px;
 
-    border: white 1px solid;
+    border: var(--border-color) 1px solid;
     border-radius: 25px;
 }
 
 #pagedivisor2 {
     flex-direction: column;
-    
-    height: 500px;
 }
 
 .lists {
@@ -140,10 +153,10 @@ a {
 #heading {
     border-radius: 25px;
     font-size: 15px;
-    color: white;
+    color: var(--text-color);
     display: flex;
-    background-color: black;
-    border: 1px solid white;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;

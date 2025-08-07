@@ -26,77 +26,15 @@ lightModeToggle.onclick = function(event) {
     event.preventDefault();
 
     if (lightModeSwitch == 0) {
+        document.body.setAttribute("data-theme", "light");
 
-    for(i = 0; i < para.length; i++) {
-    para[i].style.color = "black";
-    }
+        lightModeToggle.src = "images/nightmode.svg";
+        lightModeSwitch = 1;
+    } else {
+        document.body.setAttribute("data-theme", "");
 
-    for(i = 0; i < lists.length; i++) {
-    lists[i].style.color = "black";
-    }
-
-    for(i = 0; i < headings1.length; i++) {
-    headings1[i].style.color = "black";
-    }
-
-    for(i = 0; i < headings2.length; i++) {
-    headings2[i].style.color = "black";
-    }
-
-    for(i = 0; i < headings3.length; i++) {
-    headings3[i].style.color = "black";
-    }
-
-    body.style.backgroundColor = "white";
-
-    pageDivisor2.style.borderColor = "black";
-    pageDivisor3.style.borderColor = "black";
-
-    realHeading.style.backgroundColor = "white";
-    navBar.style.backgroundColor = "white";
-    realHeading.style.borderColor = "black";
-    navBar.style.borderColor = "black";
-    portrait.style.borderColor = "black";
-
-    lightModeToggle.src = "images/nightmode.svg";
-
-    lightModeSwitch++;
-}
-
-    else if (lightModeSwitch == 1) {
-    for(i = 0; i < para.length; i++) {
-    para[i].style.color = "white";
-    }
-
-    for(i = 0; i < lists.length; i++) {
-    lists[i].style.color = "white";
-    }
-
-    for(i = 0; i < headings1.length; i++) {
-    headings1[i].style.color = "white";
-    }
-
-    for(i = 0; i < headings2.length; i++) {
-    headings2[i].style.color = "white";
-    }
-
-    for(i = 0; i < headings3.length; i++) {
-    headings3[i].style.color = "white";
-    }
-
-    body.style.backgroundColor = "black";
-
-    pageDivisor2.style.borderColor = "white";
-    pageDivisor3.style.borderColor = "white";
-
-    realHeading.style.backgroundColor = "black";
-    navBar.style.backgroundColor = "black";
-    realHeading.style.borderColor = "white";
-    navBar.style.borderColor = "white";
-    portrait.style.borderColor = "white";
-
-    lightModeSwitch = 0;
-    lightModeToggle.src = "images/lightmode.svg";
+        lightModeSwitch = 0;
+        lightModeToggle.src = "images/lightmode.svg";
     }
 
 }

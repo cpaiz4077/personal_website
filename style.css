@@ -3,30 +3,59 @@
     margin: 0 0;
 }
 
-br {
-    color:white;
+:root {
+    --bg-color: black;
+    --text-color: white;
+    --border-color: white;
+
+    scroll-behavior: smooth;
+}
+
+[data-theme="light"] {
+    --bg-color: white;
+    --text-color: black;
+    --border-color: black;
 }
 
 body {
-    font-family: monospace;;
-    background-color: black;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    padding: 0 2em;
+
+    font-family: monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    transition: all 0.2s ease-in-out;
 }
 
 #navbar {
-    border-radius: 25px;
-    font-size: 15px;
-    color: white;
     display: flex;
-    background-color: black;
-    border: 1px solid white;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 20px;
+    gap: 10em;
+    width: 100%;
+    margin: 20px;
+    padding: 10px 20px;
+
+    border-radius: 25px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    font-size: 15px;
+}
+
+section {
+    margin: 0em auto;
+    padding: 6em 0;
+}
+
+#about-me {
+    font-size: 2em;
+    text-align: center;
 }
 
 .pagedivisor {
@@ -35,7 +64,6 @@ body {
     align-items: center;
     height: 450px;
     width: 100%;
-    margin-top: 70px;
 }
 
 #sections {
@@ -59,20 +87,17 @@ body {
 }
 
 #portrait {
-
     width: 40%;
     height: 100%;
-    color: 20px;
-    border: white 1px solid;
+    border: var(--border-color) 1px solid;
     border-radius: 10px;
     padding: 10px;
-
 }
 #navlinks {
-    width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 3em;
 }
 
 /* interactive elements */ 
@@ -84,22 +109,23 @@ body {
 
 a {
     text-decoration: none;
-    color:white;
+    color:var(--text-color);
 }
 
 /* SECOND HALF OF PAGE */
 
-#pagedivisor2 {
-    
-    border: white 1px solid;
-    border-radius: 25px;
+#pagedivisor2, #pagedivisor3 {
     display: flex;
-    flex-direction: column;
-    
-    height: 500px;
-    max-width: 1000px;
     margin: 0 auto;
     padding: 40px;
+    max-width: 1000px;
+
+    border: var(--border-color) 1px solid;
+    border-radius: 25px;
+}
+
+#pagedivisor2 {
+    flex-direction: column;
 }
 
 .lists {
@@ -119,38 +145,22 @@ a {
     margin-bottom: 10px;
 }
 
-#pagedivisor3 {
-    
-    border: white 1px solid;
-    border-radius: 25px;
-    display: flex;
-    
-    height: 900px;
+#pagedivisor3 {    
     flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px;
 }
 
 
 #heading {
-    
     border-radius: 25px;
     font-size: 15px;
-    color: white;
+    color: var(--text-color);
     display: flex;
-    background-color: black;
-    border: 1px solid white;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 30px;
+    padding: 10px 20px;
+    margin: 20px 0 30px;
 }
 
 .extras {
@@ -160,7 +170,6 @@ a {
     margin-bottom: 30px;
     flex-wrap: wrap;
     display: flex;
-
 }
 
 #extracurricularDesc {
@@ -171,8 +180,9 @@ a {
     padding-bottom:20px;
 }
 
-#unofficialfootnote {
+#theunofficialfootnote {
     margin-bottom: 10px;
+    align-self: self-start;
 }
 
 #lightModeToggle:hover {
